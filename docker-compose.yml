@@ -3,11 +3,17 @@ version: '3'
 services:
   nfs-server:
     image: docker.io/centos:7
+    stdin_open: true #后台运行
+    tty: true #后台运行
+    privileged: true #用友真正的root权限
     ports:
       - "6666:6666"
     container_name: nfs-server
   nfs-client:
     image: docker.io/centos:7
+    stdin_open: true #后台运行
+    tty: true #后台运行
+    privileged: true #用友真正的root权限
     ports:
       - "7777:7777"
     container_name: nfs-client

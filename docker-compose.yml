@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  nfs-server:
+    image: docker.io/centos:7
+    ports:
+      - "6666:6666"
+    container_name: nfs-server
+  nfs-client:
+    image: docker.io/centos:7
+      ports:
+        - "7777:7777"
+      container_name: nfs-client

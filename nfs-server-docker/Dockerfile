@@ -1,0 +1,2 @@
+FROM docker.io/centos:7
+EXPOSE 6666
